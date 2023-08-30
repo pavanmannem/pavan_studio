@@ -1,0 +1,129 @@
+/* input[type="text"]{
+  position:absolute;
+  top:10%;
+  left:50%;
+
+  transform: translate(-50%,-50%);
+} */
+
+@font-face {
+  font-family: "Amphora";
+  src: url(resources/fonts/Amphora-Regular.otf) format("OpenType");
+}
+
+@font-face {
+  font-family: "Public";
+  src: url(resources/fonts/PublicSans-SemiBold.ttf) format("truetype");
+}
+
+
+@font-face {
+  font-family: "Quanta";
+  src: url(resources/QuantaGroteskPro-Medium.ttf) format("truetype");
+}
+
+
+
+.textArea {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size:12;
+  text-align: center;
+}
+
+.button-container {
+  font-family: 'Public';
+  position: absolute;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  top: 5%;  /* Adjust this value as needed */
+  left: 50%;
+  text-align: center;  /* To center the text */
+}
+
+.pill-button {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  border-style: dotted;
+  border-color: #F18268;
+  border-width: 0.1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  padding-left: 10px;
+  padding-right: 10px; 
+  text-align: center;
+  color: #Ee3306
+
+}
+
+.pill-button:hover {
+  background-color: #F18268;
+}
+
+.button-char {
+  position: absolute;
+  top: 25%;  /* Reduced from previous 15%; adjust further if needed */
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 24px;        /* Adjust as per your preference */    /* Space between the character and text */
+  color: #Ee3306;            /* Making the character red */
+}
+
+.pill-button > span:not(.button-char) {
+  position: absolute;
+  bottom: 15%; /* Adjust this value as needed */
+  text-align: center;  /* To center the text */
+}
+
+.spacer {
+  width: 30px;
+}
+
+
+/* 
+input[type="button"]{
+  width:100px;
+}
+
+input[type="range"]{
+  width:100px;
+  margin:0px;
+}
+ */
+
+
+.credit {
+  font-family: 'Public';
+  position: absolute;
+  bottom: 0;
+  left: 50%;  /* Centers by default */
+  transform: translateX(-50%); /* Adjusts for perfect centering */
+  padding: 20px;
+  color: #F74d26;
+  font-size: 14px; /* Example responsive text size for mobile */
+  text-decoration: italic;
+}
+
+.credit a {
+  color: #F74d26; /* This is a common hyperlink color, but feel free to change */
+  text-decoration: underline;
+}
+
+/* Media Query for Desktop and larger devices */
+@media (min-width: 768px) {
+  .credit {
+    left: 0; /* Bottom left positioning */
+    transform: none; /* Reset transform */
+    font-size: 16px; /* Example responsive text size for desktop */
+  }
+}
+
+
+

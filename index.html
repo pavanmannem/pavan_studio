@@ -1,0 +1,105 @@
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>pavan.studio</title>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="helper/sketch.js" type="text/javascript"></script>
+  <script src="helper/update.js" type="text/javascript"></script>
+  <script src="helper/textures.js" type="text/javascript"></script>
+  <script src="helper/italicWave.js" type="text/javascript"></script>
+
+  <script src="helper/entry.js" type="text/javascript"></script>
+  <script src="helper/g_cloud.js" type="text/javascript"></script>
+  <script src="helper/g_scribble.js" type="text/javascript"></script>
+  <script src="helper/g_zigzag.js" type="text/javascript"></script>
+  <script src="helper/g_gradient.js" type="text/javascript"></script>
+  <script src="helper/g_box.js" type="text/javascript"></script>
+
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&display=swap" rel="stylesheet">
+
+  <style> body {padding: 0; margin: 0;} canvas {vertical-align: top;} </style>
+</head>
+
+<body>
+
+
+  <script> 
+  const shuffleTranslations = [
+    'यादृच्छिक',  // Hindi for Random
+    'షఫుల్', // Telugu for Random
+    '随机',        // Chinese for Random
+    'ランダム',    // Japanese for Random
+    'ចៃដន្យ' ,  //Khmer for Random
+    'אַקרַאִי', // Hebrew for Random
+];
+
+const invertTranslations = [
+    'उलटना',  // Hindi for Invert
+    'తిరగబెట్టు', // Telugu for Invert
+    '反转',        // Chinese for Invert
+    '反転',    // Japanese for Invert
+    'הִתהַפֵּךְ', // Hebrew for Invert
+
+  ];
+
+  let lastShuffleIndex = -1;
+  let lastInvertIndex = -1;
+
+  function getRandomIndex(length, lastIdx) {
+      let newIndex;
+      do {
+          newIndex = Math.floor(Math.random() * length);
+      } while(newIndex === lastIdx);
+      return newIndex;
+}
+  
+  function shuffle_trans() {
+    const randomIndex = Math.floor(Math.random() * shuffleTranslations.length);
+    document.querySelector('.pill-button:nth-child(1) .button-char').textContent = shuffleTranslations[randomIndex];
+    lastShuffleIndex = newIndex;  // Remember the last index for next time
+
+  }
+
+  function invert_trans() {
+    const randomIndex = Math.floor(Math.random() * invertTranslations.length);
+    document.querySelector('.pill-button:nth-child(3) .button-char').textContent = invertTranslations[randomIndex];
+    lastInvertIndex = newIndex;  // Remember the last index for next time
+
+  }
+  
+  
+  </script>
+
+
+  <div class="button-container">
+    <div class="pill-button" onclick="reRoll(); shuffle_trans()">
+        <span class="button-char">यादृच्छिक</span>
+        <span>SHUFFLE</span>
+    </div>
+    <div class="spacer"></div>
+    <div class="pill-button" onclick="invert(); invert_trans()">
+        <span class="button-char">విలోమం</span>
+        <span>INVERT</span>
+    </div>
+</div>
+
+
+
+    <div class="credit">
+      original design by <a href="https://www.kielm.com/" target="_blank">kiel danger</a>
+  </div>
+
+
+
+</body>
+
+</html>
