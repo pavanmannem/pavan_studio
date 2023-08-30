@@ -10,10 +10,12 @@
   <link rel="stylesheet" href="./style.css">
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
   <script src="helper/sketch.js" type="text/javascript"></script>
   <script src="helper/update.js" type="text/javascript"></script>
   <script src="helper/textures.js" type="text/javascript"></script>
   <script src="helper/italicWave.js" type="text/javascript"></script>
+
 
   <script src="helper/entry.js" type="text/javascript"></script>
   <script src="helper/g_cloud.js" type="text/javascript"></script>
@@ -26,10 +28,18 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&display=swap" rel="stylesheet">
 
-  <style> body {padding: 0; margin: 0;} canvas {vertical-align: top;} </style>
+  <style> body {padding: 0; margin: 0;;} canvas {vertical-align: top;} </style>
 </head>
 
 <body>
+
+  <div class="loading-bar-container">
+    <div class="loading-text">
+      <span class="loading-text">LOADING [<span class="loading-percentage">0</span>%]</span>
+    </div>
+    <div class="loading-bar"></div>
+  </div>
+
 
 
   <script> 
@@ -65,30 +75,31 @@ const invertTranslations = [
   function shuffle_trans() {
     const randomIndex = Math.floor(Math.random() * shuffleTranslations.length);
     document.querySelector('.pill-button:nth-child(1) .button-char').textContent = shuffleTranslations[randomIndex];
-    lastShuffleIndex = newIndex;  // Remember the last index for next time
+    lastShuffleIndex = randomIndex;  // Remember the last index for next time
 
   }
 
   function invert_trans() {
     const randomIndex = Math.floor(Math.random() * invertTranslations.length);
     document.querySelector('.pill-button:nth-child(3) .button-char').textContent = invertTranslations[randomIndex];
-    lastInvertIndex = newIndex;  // Remember the last index for next time
+    lastInvertIndex = randomIndex;  // Remember the last index for next time
 
   }
   
   
   </script>
+  
 
 
   <div class="button-container">
     <div class="pill-button" onclick="reRoll(); shuffle_trans()">
         <span class="button-char">यादृच्छिक</span>
-        <span>SHUFFLE</span>
+        <span>RANDOM SHUFFLE</span>
     </div>
     <div class="spacer"></div>
     <div class="pill-button" onclick="invert(); invert_trans()">
         <span class="button-char">విలోమం</span>
-        <span>INVERT</span>
+        <span>COLOR INVERTER</span>
     </div>
 </div>
 
@@ -98,8 +109,10 @@ const invertTranslations = [
       original design by <a href="https://www.kielm.com/" target="_blank">kiel danger</a>
   </div>
 
+  <!-- <script> invert();invert() </script> -->
 
 
+  <p style="display:none;" id="p5_loading"></p>
 </body>
 
 </html>

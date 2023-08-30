@@ -1,3 +1,5 @@
+// import { setText } from './update.js'; 
+
 var pgT = [];
 var pEntry = [];
 var heightRatio = [];
@@ -9,14 +11,18 @@ var tFont = [];
 var pGradV, pGradH, pGradCH;
 
 var pgTextSize = 100;
-var bkgdColor, foreColor;
+let inverter = true; // Initialize inverter as false to start with white
+let bkgdColor = '#ffffff';  // This sets the initial background color to white
+let foreColor = '#000000';  // This sets the initial foreground/text color to black
+
+
+
 
 var keyText;
 var keyArray = [];
 
 var xNudge = [];
 var wordCount = [];
-var stripH = 60;
 var wWindow;
 var wPad;
 
@@ -26,7 +32,7 @@ var colorA = [];
 
 var widgetOn = true;
 
-var inverter = false;
+
 var typeToggle = 1;
 
 function preload(){
@@ -35,23 +41,35 @@ function preload(){
   tFont[1] = loadFont("./resources/fonts/QuantaGroteskPro-Medium.ttf");
   tFont[2] = loadFont("./resources/fonts/PublicSans-SemiBold.ttf");
 
+  var loadedImagesCount = 0;
 
   for (var i = 0; i < 12; i++) {
     pImg[i] = loadImage("./resources/gifs/" + i + ".gif", 
-        () => { /* success callback, you can leave this empty if you don't need to do anything on success */ }, 
+        () => {
+            loadedImagesCount++;
+            let percentage = (loadedImagesCount / 12) * 100;
+            document.querySelector('.loading-bar').style.width = percentage;
+            document.querySelector('.loading-percentage').innerText = percentage.toFixed(0); // Update the percentage text
+            if(loadedImagesCount == 12) {
+                document.querySelector('.loading-bar-container').style.display = 'none';
+                document.querySelector('.button-container').style.display = 'flex'; // display the buttons
+            }
+        }, 
         (err) => {
             console.error(`Error loading image at index ${i}:`, err);
         }
     );
+  }  
+  
+  
 }
 
-}
 
 function setup(){
+
   createCanvas(windowWidth,windowHeight);
   frameRate(120);
 
-  wPad = 40;
   wWindow = width - map(wPad, 0, 100, 0, width);
   typeToggle = int(random(1,2));
 
@@ -73,7 +91,6 @@ function setup(){
 function draw(){
   background(bkgdColor);
 
-  // image(pImg[0], width/2, height/2);
   push();
     translate(width/2, height/2 - fullHeight/2);
     italicWave0();

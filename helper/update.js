@@ -16,7 +16,7 @@ function setText(){
     keyArray = "";
   }
 
-  stripH = 110
+  stripH = 90
   wPad = 60;
   wWindow = width - map(wPad, 0, 100, 0, width);
 
@@ -122,6 +122,7 @@ function aSet(ticker, influ){          // takes a 0 - 1 and returns an eased 0 -
 }
 
 function randomInsert(){
+
   // insert for images
   // var r0 = 8;
   var r0 = 1 + floor(keyArray.length/5);
@@ -129,14 +130,6 @@ function randomInsert(){
     var insertPoint = round(random(keyArray.length));
     keyArray.splice(insertPoint, 0, "X0");
   }
-
-  // insert for slashes
-  // var r1 = 10;
-  // var r1 = 1 + floor(keyArray.length/12);
-  // for(var r = 0; r<r1; r++){
-  //   var insertPoint = round(random(keyArray.length));
-  //   keyArray.splice(insertPoint, 0, "X1");
-  // }
 
   // insert for circles
   // var r2 = 5;
@@ -146,29 +139,6 @@ function randomInsert(){
     keyArray.splice(insertPoint, 0, "X2");
   }
 
-  // insert for scribbles
-  // var r3 = 4;
-  // var r3 = 1 + floor(keyArray.length/12)
-  // for(var r = 0; r<r3; r++){
-  //   var insertPoint = round(random(keyArray.length));
-  //   keyArray.splice(insertPoint, 0, "X3");
-  // }
-
-  // insert for blanks
-  // var r4 = 4;
-  // var r4 = 1 + floor(keyArray.length/18)
-  // for(var r = 0; r<r4; r++){
-  //   var insertPoint = round(random(keyArray.length));
-  //   keyArray.splice(insertPoint, 0, "X4");
-  // }
-
-  // insert for clouds
-  // var r5 = 4;
-  // var r5 = 1 + floor(keyArray.length/10)
-  // for(var r = 0; r<r5; r++){
-  //   var insertPoint = round(random(keyArray.length));
-  //   keyArray.splice(insertPoint, 0, "X5");
-  // }
 
   // insert for zigzag
   // var r6 = 4;
@@ -186,38 +156,11 @@ function randomInsert(){
     keyArray.splice(insertPoint, 0, "X7");
   }
 
-  // insert for boxes
-  // var r8 = 4;
-  // var r8 = floor(keyArray.length/15)
-  // for(var r = 0; r<r8; r++){
-  //   var insertPoint = round(random(keyArray.length));
-  //   keyArray.splice(insertPoint, 0, "X8");
-  // }
 }
-
-// function hideWidget(){
-//   widgetOn = !widgetOn;
-//   if(widgetOn==true){
-//     document.getElementById('widget').style.display = "block";
-//   } else {
-//     document.getElementById('widget').style.display = "none";
-//   }
-// }
 
 function invert(){
   inverter = !inverter;
-  if(inverter == true){
-    bkgdColor = color('#ffffff');
-    foreColor = color('#000000');
-    colorA[4] = bkgdColor;
-    pImg[6] = loadImage("./resources/gifs/6i.gif");
-
-    pGradientH();
-    pGradientV();
-    pGradientCH();
-
-    setText();
-  } else {
+  if(inverter){
     bkgdColor = color('#000000');
     foreColor = color('#ffffff');
     colorA[4] = bkgdColor;
@@ -228,6 +171,19 @@ function invert(){
     pGradientCH();
 
     setText();
+  } else {
+    bkgdColor = color('#ffffff');
+    foreColor = color('#000000');
+    colorA[4] = bkgdColor;
+    pImg[6] = loadImage("./resources/gifs/6.gif");
+
+    pGradientH();
+    pGradientV();
+    pGradientCH();
+
+    setText();
   }
 }
+
+
 
