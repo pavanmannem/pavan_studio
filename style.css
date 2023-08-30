@@ -146,35 +146,3 @@
   font-weight: normal;
 }
 
-
-body {
-  height: 100vh;
-  cursor: none;
-  overflow: hidden;
-}
-
-.cursor, .trail {
-  position: absolute;
-  border-radius: 50%;
-  transform: translate(-50%, -50%); /* Centers the cursor relative to the pointer */
-  pointer-events: none; /* Makes sure the custom cursor doesn't interfere with click events */
-}
-
-.cursor {
-  width: 50px;
-  height: 50px;
-  border: 2px solid black;
-}
-
-.trail {
-  width: 25px;
-  height: 25px;
-  background-color: black;
-  transition: 0.2s; /* Creates a delay effect */
-}
-
-
-
-body, html {
-  background-color: #ffffff;
-}
