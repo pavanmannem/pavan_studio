@@ -35,34 +35,53 @@ var widgetOn = true;
 
 var typeToggle = 1;
 
-function preload(){
+function preload() {
+  // Cache DOM elements
+  const loadingBarEl = document.querySelector('.loading-bar');
+  const loadingPercentageEl = document.querySelector('.loading-percentage');
+  const loadingBarContainerEl = document.querySelector('.loading-bar-container');
+  const buttonContainerEl = document.querySelector('.button-container');
 
-  tFont[0] = loadFont("./resources/fonts/Amphora-Regular.otf");
-  tFont[1] = loadFont("./resources/fonts/QuantaGroteskPro-Medium.ttf");
-  tFont[2] = loadFont("./resources/fonts/PublicSans-SemiBold.ttf");
+  let loadedImagesCount = 0;
+  let totalResources = 15; // 12 images + 3 fonts
 
-  var loadedImagesCount = 0;
+  // Callback for updating the progress
+  function updateProgress() {
+      loadedImagesCount++;
+      let percentage = (loadedImagesCount / totalResources) * 100;
+      loadingBarEl.style.width = percentage + '%';
+      loadingPercentageEl.innerText = percentage.toFixed(0);
 
-  for (var i = 0; i < 12; i++) {
-    pImg[i] = loadImage("./resources/gifs/" + i + ".gif", 
-        () => {
-            loadedImagesCount++;
-            let percentage = (loadedImagesCount / 12) * 100;
-            document.querySelector('.loading-bar').style.width = percentage;
-            document.querySelector('.loading-percentage').innerText = percentage.toFixed(0); // Update the percentage text
-            if(loadedImagesCount == 12) {
-                document.querySelector('.loading-bar-container').style.display = 'none';
-                document.querySelector('.button-container').style.display = 'flex'; // display the buttons
-            }
-        }, 
-        (err) => {
-            console.error(`Error loading image at index ${i}:`, err);
-        }
-    );
-  }  
+      if (loadedImagesCount == totalResources) {
+          loadingBarContainerEl.style.display = 'none';
+          buttonContainerEl.style.display = 'flex';
+      }
+  }
+
+  // Load fonts in parallel
+  const fontPaths = [
+      "./resources/fonts/Amphora-Regular.otf",
+      "./resources/fonts/QuantaGroteskPro-Medium.ttf",
+      "./resources/fonts/PublicSans-SemiBold.ttf"
+  ];
   
-  
+  fontPaths.forEach((path, index) => {
+      tFont[index] = loadFont(path, updateProgress, err => {
+          console.error(`Error loading font from ${path}:`, err);
+      });
+  });
+
+  // Load images
+  for (let i = 0; i < 12; i++) {
+      pImg[i] = loadImage("./resources/gifs/" + i + ".gif", 
+          updateProgress,
+          err => {
+              console.error(`Error loading image at index ${i}:`, err);
+          }
+      );
+  }
 }
+
 
 
 function setup(){
