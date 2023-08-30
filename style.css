@@ -146,3 +146,25 @@
   font-weight: normal;
 }
 
+.social-links {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 2px;
+  z-index: 1000; /* Ensures the bar stays above other elements */
+}
+
+.social-links a {
+  color: #F74d26; /* Default color of the icons */
+  font-size: 30px; /* Size of the icons */
+  text-decoration: none;
+  padding: 5px;
+  border-radius: 50%;
+  transition: color 0.3s ease-in-out; /* Smooth color transition on hover */
+}
+
+.social-links a:hover {
+  color: blue; /* Color on hover */
+}
