@@ -1,3 +1,4 @@
+var counter = 0
 function setText(){
   pgT = [];
   pEntry = [];
@@ -158,13 +159,15 @@ function randomInsert(){
 
 }
 
+
+
 function invert(){
   inverter = !inverter;
-  if(inverter){
-    bkgdColor = color('#000000');
-    foreColor = color('#ffffff');
+  if(inverter == true){
+    bkgdColor = color('#ffffff');
+    foreColor = color('#000000');
     colorA[4] = bkgdColor;
-    pImg[6] = loadImage("./resources/gifs/6.gif");
+    pImg[6] = loadImage("construct/resources/gifs/6i.gif");
 
     pGradientH();
     pGradientV();
@@ -172,10 +175,10 @@ function invert(){
 
     setText();
   } else {
-    bkgdColor = color('#ffffff');
-    foreColor = color('#000000');
+    bkgdColor = color('#000000');
+    foreColor = color('#ffffff');
     colorA[4] = bkgdColor;
-    pImg[6] = loadImage("./resources/gifs/6.gif");
+    pImg[6] = loadImage("construct/resources/gifs/6.gif");
 
     pGradientH();
     pGradientV();
@@ -184,6 +187,4 @@ function invert(){
     setText();
   }
 }
-
-
 

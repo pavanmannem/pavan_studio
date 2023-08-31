@@ -16,7 +16,6 @@ class Entry{
 
     this.pg;
     if(ver == 5){
-      console.log("ver = 5")
       this.pg = new Cloud(heightRatio[this.sel], this.sH, this.sel);
     } 
     else if(ver == 3){

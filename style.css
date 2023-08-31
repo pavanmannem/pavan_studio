@@ -106,6 +106,17 @@
   text-decoration: underline;
 }
 
+.credit a {
+  color: #F74d26; /* This is a common hyperlink color, but feel free to change */
+  text-decoration: underline;
+  transition: 0.4s ease-in-out; /* Moved transition here so it applies on hover and non-hover states */
+}
+
+.credit a:hover {
+  color: #2A56FF; /* This is a common hyperlink color, but feel free to change */
+  text-decoration: underline;
+}
+
 /* Media Query for Desktop and larger devices */
 @media (min-width: 768px) {
   .credit {
@@ -162,9 +173,9 @@
   text-decoration: none;
   padding: 5px;
   border-radius: 50%;
-  transition: color 0.3s ease-in-out; /* Smooth color transition on hover */
+  transition: color 0.s ease-in-out; /* Smooth color transition on hover */
 }
 
 .social-links a:hover {
-  color: blue; /* Color on hover */
+  color: #2A56FF; /* Color on hover */
 }

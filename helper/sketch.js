@@ -11,12 +11,9 @@ var tFont = [];
 var pGradV, pGradH, pGradCH;
 
 var pgTextSize = 100;
-let inverter = true; // Initialize inverter as false to start with white
-let bkgdColor = '#ffffff';  // This sets the initial background color to white
-let foreColor = '#000000';  // This sets the initial foreground/text color to black
-
-
-
+var inverter = true;
+var bkgdColor = 'white';
+var foreColor;
 
 var keyText;
 var keyArray = [];
@@ -92,8 +89,8 @@ function setup(){
   wWindow = width - map(wPad, 0, 100, 0, width);
   typeToggle = int(random(1,2));
 
-  bkgdColor = color('#000000');
-  foreColor = color('#ffffff');
+  bkgdColor = color('#ffffff');
+  foreColor = color('#000000');
   colorA[0] = color('#25d964');
   colorA[1] = color('#f24f13');
   colorA[2] = color('#f2b90f');
@@ -123,30 +120,30 @@ function windowResized(){
   setText();
 }
 
-function sinEngine(aCount, aLength, bCount,bLength, Speed, slopeN) {
-  var sinus = sin((frameCount*Speed + aCount*aLength + bCount*bLength));
-  var sign = (sinus >= 0 ? 1: -1);
-  var sinerSquare = sign * (1-pow(1-abs(sinus),slopeN));
-  return sinerSquare;
-}
+// function sinEngine(aCount, aLength, bCount,bLength, Speed, slopeN) {
+//   var sinus = sin((frameCount*Speed + aCount*aLength + bCount*bLength));
+//   var sign = (sinus >= 0 ? 1: -1);
+//   var sinerSquare = sign * (1-pow(1-abs(sinus),slopeN));
+//   return sinerSquare;
+// }
 
-function aSet(ticker, influ){          // takes a 0 - 1 and returns an eased 0 - 1
-  var capTicker = ticker%1;
-  var targetPoint = pow(capTicker,influ)/(pow(capTicker,influ) + pow(1-capTicker,influ));
-  return targetPoint;
-}
+// function aSet(ticker, influ){          // takes a 0 - 1 and returns an eased 0 - 1
+//   var capTicker = ticker%1;
+//   var targetPoint = pow(capTicker,influ)/(pow(capTicker,influ) + pow(1-capTicker,influ));
+//   return targetPoint;
+// }
 
-function aSet2(ticker, influ){  /// takes a 0 - 1 and returns an eased 0 - 1 then 1 to 0
-  var nowTicker = ticker;
+// function aSet2(ticker, influ){  /// takes a 0 - 1 and returns an eased 0 - 1 then 1 to 0
+//   var nowTicker = ticker;
 
-  var targetPoint = 0;
-  if(nowTicker<=0.5){
-    var thisTicker = map(nowTicker, 0, 0.5, 0, 1);
-    targetPoint = pow(thisTicker,influ)/(pow(thisTicker,influ) + pow(1-thisTicker,influ));
-  } else if(nowTicker<=1){
-    var thisTicker = map(nowTicker, 0.5, 1, 1, 0);
-    targetPoint = pow(thisTicker,influ)/(pow(thisTicker,influ) + pow(1-thisTicker,influ));
-  }
+//   var targetPoint = 0;
+//   if(nowTicker<=0.5){
+//     var thisTicker = map(nowTicker, 0, 0.5, 0, 1);
+//     targetPoint = pow(thisTicker,influ)/(pow(thisTicker,influ) + pow(1-thisTicker,influ));
+//   } else if(nowTicker<=1){
+//     var thisTicker = map(nowTicker, 0.5, 1, 1, 0);
+//     targetPoint = pow(thisTicker,influ)/(pow(thisTicker,influ) + pow(1-thisTicker,influ));
+//   }
 
-  return targetPoint;
-}
+//   return targetPoint;
+// }
