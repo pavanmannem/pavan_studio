@@ -45,11 +45,6 @@ The main scripts in this website include:
 - **invert_trans()**: Translates the "COLOR INVERTER" button text into a random language from the provided list.
 - **Link Target Updater**: Ensures that all social links open in a new browser tab.
 
-## Running the Website
-
-1. Ensure you have all the dependencies available. The website uses CDN for many of its dependencies, so an active internet connection is required.
-2. Open the HTML file in a browser.
-3. Interact with the UI components.
 
 ## Credits
 
@@ -57,7 +52,7 @@ The original design is credited to [kiel danger](https://www.kielm.com/).
 
 ## Contact
 
-You can get in touch or follow the website owner via the following platforms:
+You can get in touch or follow me:
 
 - [Twitter](https://twitter.com/pavan6000)
 - [Instagram](https://www.instagram.com/6.outof.10)
