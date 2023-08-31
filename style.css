@@ -32,7 +32,7 @@
 
 .button-container {
   display: none;
-  font-family: 'Public';
+  font-family: 'Amphora';
   position: absolute;
   transform: translateX(-50%);
   align-items: center;
@@ -91,7 +91,7 @@
 
 
 .credit {
-  font-family: 'Public';
+  font-family: 'Amphora';
   position: absolute;
   bottom: 10px;
   left: 50%;

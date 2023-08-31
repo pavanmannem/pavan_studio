@@ -3,9 +3,9 @@ function updateStripAndPadding() {
   // Calculate the values based on screen size
   console.log(window.innerHeight, window.innerWidth)
 
-  stripH = window.innerHeight * 0.1; // You can adjust the multiplier as needed
+  stripH = window.innerHeight * 0.105; // You can adjust the multiplier as needed
 
-  wPad = window.innerWidth * 0.05;   // You can adjust the multiplier as needed
+  wPad = window.innerWidth * 0.05 ;   // You can adjust the multiplier as needed
   console.log("stripH", stripH,"|", "wPad", wPad)
 
 }
