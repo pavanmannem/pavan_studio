@@ -69,7 +69,7 @@ function preload() {
   });
 
   // Load images
-  for (let i = 0; i < 12; i++) {
+  for (let i = 0; i < 13; i++) {
       pImg[i] = loadImage("./resources/gifs/" + i + ".gif", 
           updateProgress,
           err => {

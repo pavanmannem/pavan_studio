@@ -17,7 +17,7 @@ function setText(){
     keyArray = "";
   }
 
-  stripH = 90
+  stripH = 110
   wPad = 60;
   wWindow = width - map(wPad, 0, 100, 0, width);
 
