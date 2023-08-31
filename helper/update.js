@@ -1,4 +1,15 @@
-var counter = 0
+
+function updateStripAndPadding() {
+  // Calculate the values based on screen size
+  console.log(window.innerHeight, window.innerWidth)
+
+  stripH = window.innerHeight * 0.1; // You can adjust the multiplier as needed
+
+  wPad = window.innerWidth * 0.05;   // You can adjust the multiplier as needed
+  console.log("stripH", stripH,"|", "wPad", wPad)
+
+}
+
 function setText(){
   pgT = [];
   pEntry = [];
@@ -8,7 +19,6 @@ function setText(){
   sHarry = [];
 
   fullHeight = 0;
-  // var enteredText = "my name is pavan MANNEM and this is my website. i'm currently based in LOS ANGELES, running analytics for SONY PICTURES & ENTERTAINMENT";
   var enteredText = "I'M PAVAN MANNEM → FIND ME IN LOS ANGELES CRUNCHING NUMBERS AT SONY PICTURES & ENTERTAINMENT";
   keyText = enteredText;
   keyArray = enteredText.split(" ");
@@ -17,8 +27,9 @@ function setText(){
     keyArray = "";
   }
 
-  stripH = 110
-  wPad = 60;
+
+  updateStripAndPadding(); // Call the function to calculate stripH and wPad
+
   wWindow = width - map(wPad, 0, 100, 0, width);
 
 
@@ -167,7 +178,7 @@ function invert(){
     bkgdColor = color('#ffffff');
     foreColor = color('#000000');
     colorA[4] = bkgdColor;
-    pImg[6] = loadImage("construct/resources/gifs/6i.gif");
+    pImg[6] = loadImage("./resources/gifs/6i.gif");
 
     pGradientH();
     pGradientV();
@@ -178,7 +189,7 @@ function invert(){
     bkgdColor = color('#000000');
     foreColor = color('#ffffff');
     colorA[4] = bkgdColor;
-    pImg[6] = loadImage("construct/resources/gifs/6.gif");
+    pImg[6] = loadImage("./resources/gifs/6.gif");
 
     pGradientH();
     pGradientV();

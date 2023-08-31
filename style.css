@@ -37,8 +37,9 @@
   transform: translateX(-50%);
   align-items: center;
   top: 5%;  /* Adjust this value as needed */
-  left: 50%;
+  left: 10%;
   text-align: center;  /* To center the text */
+  margin-left: 1%;
 }
 
 .pill-button {
@@ -84,7 +85,7 @@
 }
 
 .spacer {
-  width: 30px;
+  width: 10px;
 }
 
 
@@ -92,8 +93,8 @@
 .credit {
   font-family: 'Public';
   position: absolute;
-  bottom: 0;
-  left: 50%;  /* Centers by default */
+  bottom: 10px;
+  left: 50%;
   transform: translateX(-50%); /* Adjusts for perfect centering */
   padding: 20px;
   color: #F74d26;
@@ -117,14 +118,8 @@
   text-decoration: underline;
 }
 
-/* Media Query for Desktop and larger devices */
-@media (min-width: 768px) {
-  .credit {
-    left: 0; /* Bottom left positioning */
-    transform: none; /* Reset transform */
-    font-size: 16px; /* Example responsive text size for desktop */
-  }
-}
+
+
 
 .loading-bar-container {
   font-family: 'Public';
@@ -159,8 +154,8 @@
 
 .social-links {
   position: fixed;
-  bottom: 10px;
-  left: 50%;
+  top: 10%;
+  right: 10px;
   transform: translateX(-50%);
   display: flex;
   gap: 2px;
