@@ -93,7 +93,7 @@
 .credit {
   font-family: 'Amphora';
   position: absolute;
-  bottom: 10px;
+  bottom: 0.5px;
   left: 50%;
   transform: translateX(-50%); /* Adjusts for perfect centering */
   padding: 20px;

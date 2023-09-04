@@ -10,7 +10,7 @@ var tFont = [];
 
 var pGradV, pGradH, pGradCH;
 
-var pgTextSize = 100;
+var pgTextSize = 164;
 var inverter = true;
 var bkgdColor = 'white';
 var foreColor;
@@ -57,9 +57,15 @@ function preload() {
 
   // Load fonts in parallel
   const fontPaths = [
-      "./resources/fonts/Amphora-Regular.otf",
-      "./resources/fonts/QuantaGroteskPro-Medium.ttf",
-      "./resources/fonts/PublicSans-SemiBold.ttf"
+    // "./resources/fonts/PPNeueMachina-Regular.ttf",
+    // "./resources/fonts/PPNeueMachina-Regular.ttf",
+    // "./resources/fonts/PPNeueMachina-Regular.ttf",
+    "./resources/fonts/Amphora-Regular.otf",
+    "./resources/fonts/Amphora-Regular.otf",
+    "./resources/fonts/Amphora-Regular.otf",
+    // "./resources/fonts/QuantaGroteskPro-Medium.ttf",
+
+
   ];
   
   fontPaths.forEach((path, index) => {
@@ -120,30 +126,3 @@ function windowResized(){
   setText();
 }
 
-// function sinEngine(aCount, aLength, bCount,bLength, Speed, slopeN) {
-//   var sinus = sin((frameCount*Speed + aCount*aLength + bCount*bLength));
-//   var sign = (sinus >= 0 ? 1: -1);
-//   var sinerSquare = sign * (1-pow(1-abs(sinus),slopeN));
-//   return sinerSquare;
-// }
-
-// function aSet(ticker, influ){          // takes a 0 - 1 and returns an eased 0 - 1
-//   var capTicker = ticker%1;
-//   var targetPoint = pow(capTicker,influ)/(pow(capTicker,influ) + pow(1-capTicker,influ));
-//   return targetPoint;
-// }
-
-// function aSet2(ticker, influ){  /// takes a 0 - 1 and returns an eased 0 - 1 then 1 to 0
-//   var nowTicker = ticker;
-
-//   var targetPoint = 0;
-//   if(nowTicker<=0.5){
-//     var thisTicker = map(nowTicker, 0, 0.5, 0, 1);
-//     targetPoint = pow(thisTicker,influ)/(pow(thisTicker,influ) + pow(1-thisTicker,influ));
-//   } else if(nowTicker<=1){
-//     var thisTicker = map(nowTicker, 0.5, 1, 1, 0);
-//     targetPoint = pow(thisTicker,influ)/(pow(thisTicker,influ) + pow(1-thisTicker,influ));
-//   }
-
-//   return targetPoint;
-// }

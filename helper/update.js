@@ -3,9 +3,9 @@ function updateStripAndPadding() {
   // Calculate the values based on screen size
   console.log(window.innerHeight, window.innerWidth)
 
-  stripH = window.innerHeight * 0.105; // You can adjust the multiplier as needed
+  stripH = window.innerHeight * 0.09; // You can adjust the multiplier as needed
 
-  wPad = window.innerWidth * 0.05 ;   // You can adjust the multiplier as needed
+  wPad = window.innerWidth * 0.04 ;   // You can adjust the multiplier as needed
   console.log("stripH", stripH,"|", "wPad", wPad)
 
 }
@@ -20,6 +20,11 @@ function setText(){
 
   fullHeight = 0;
   var enteredText = "I'M PAVAN MANNEM → FIND ME IN LOS ANGELES CRUNCHING NUMBERS AT SONY PICTURES & ENTERTAINMENT";
+  var enteredText = "I'M PAVAN MANNEM → FIND ME IN AUSTIN,TX CRUNCHING NUMBERS AT SYNTHESIS PARTNERS";
+
+  
+  // var enteredText =  "\"BANG\" — MIKE BREEN" 
+
   keyText = enteredText;
   keyArray = enteredText.split(" ");
 

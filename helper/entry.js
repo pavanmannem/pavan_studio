@@ -41,10 +41,12 @@ class Entry{
       pop();
     // typography
     } else{
-      if(this.ver == 9){
-        this.update();
-        shearX(this.shr);
-      }
+
+      // Uncomment these lines to add the Italic Wave
+      // if(this.ver == 9){
+      //   this.update();
+      //   shearX(this.shr);
+      // }
       image(pgT[this.sel], 0, -this.sH/2, heightRatio[this.sel], this.sH);
     }
   }
