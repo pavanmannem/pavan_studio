@@ -36,12 +36,15 @@
 
 <body>
 
-  <div class="loading-bar-container">
-    <div class="loading-text">
-      <span class="loading-text">LOADING [<span class="loading-percentage">0</span>%]</span>
+
+    <div class="loading-bar-container">
+      <div class="loading-text">
+        <span class="loading-text">LOADING [<span class="loading-percentage">0</span>%]</span>
+      </div>
+      <div class="loading-bar"></div>
     </div>
-    <div class="loading-bar"></div>
-  </div>
+
+
 
 
 
@@ -53,6 +56,9 @@
     'ランダム',    // Japanese for Random
     'ចៃដន្យ' ,  //Khmer for Random
     'אַקרַאִי', // Hebrew for Random
+    'насумично', // Serbian for Random
+    "تصادفي", // Pashto for Random
+    "በዘፈቀደ" // Amharic for Random
 ];
 
 const invertTranslations = [
@@ -91,7 +97,28 @@ const invertTranslations = [
   
   
   </script>
+
   
+
+
+
+
+  <div class="toggle_radio">
+    <input type="radio" class="toggle_option" id="first_toggle" name="toggle_option" checked>
+    <input type="radio" class="toggle_option" id="second_toggle" name="toggle_option">
+    <input type="radio" class="toggle_option" id="third_toggle" name="toggle_option">
+    <input type="radio" class="toggle_option" id="fourth_toggle" name="toggle_option">
+    <label for="first_toggle"><p>HOME</p></label>
+    <label for="second_toggle"><p>NBA</p></label>
+    <label for="third_toggle"><p>MOVIES</p></label>
+    <label for="fourth_toggle"><p>MUSIC</p></label>
+    <div class="toggle_option_slider"></div>
+  </div>
+
+
+ 
+
+    
 
 
   <div class="button-container">

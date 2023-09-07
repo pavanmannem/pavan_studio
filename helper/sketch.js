@@ -59,11 +59,12 @@ function preload() {
   const fontPaths = [
     // "./resources/fonts/PPNeueMachina-Regular.ttf",
     // "./resources/fonts/PPNeueMachina-Regular.ttf",
-    // "./resources/fonts/PPNeueMachina-Regular.ttf",
     "./resources/fonts/Amphora-Regular.otf",
-    "./resources/fonts/Amphora-Regular.otf",
-    "./resources/fonts/Amphora-Regular.otf",
-    // "./resources/fonts/QuantaGroteskPro-Medium.ttf",
+        "./resources/fonts/PPNeueMachina-Regular.ttf",
+
+    // "./resources/fonts/Amphora-Regular.otf",
+    // "./resources/fonts/Amphora-Regular.otf",
+    "./resources/fonts/QuantaGroteskPro-Medium.ttf",
 
 
   ];
