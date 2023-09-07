@@ -7,6 +7,7 @@
 
   <title>pavan.studio</title>
   <!-- <meta name="theme-color" content="#F74d26"> -->
+  <link rel="icon" type="image/png" sizes="96x96" href="./public/icons8-abstract-32.png">
 
   <meta name="theme-color" content="#000000" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
@@ -48,28 +49,35 @@
 
 
 
-  <script> 
-  const shuffleTranslations = [
-    'यादृच्छिक',  // Hindi for Random
-    'షఫుల్', // Telugu for Random
-    '随机',        // Chinese for Random
-    'ランダム',    // Japanese for Random
-    'ចៃដន្យ' ,  //Khmer for Random
-    'אַקרַאִי', // Hebrew for Random
-    'насумично', // Serbian for Random
-    "تصادفي", // Pashto for Random
-    "በዘፈቀደ" // Amharic for Random
-];
-
-const invertTranslations = [
-    'उलटना',  // Hindi for Invert
-    'తిరగబెట్టు', // Telugu for Invert
-    '反转',        // Chinese for Invert
-    '反転',    // Japanese for Invert
-    'הִתהַפֵּךְ', // Hebrew for Invert
-
-  ];
-
+    <script> 
+      const shuffleTranslations = [
+        'यादृच्छिक',  // Hindi for Random
+        'షఫుల్', // Telugu for Random
+        '随机',        // Chinese for Random
+        'ランダム',    // Japanese for Random
+        'ចៃដន្យ' ,  //Khmer for Random
+        'אַקרַאִי', // Hebrew for Random
+        "تصادفي", // Pashto for Random
+        "በዘፈቀደ", // Amharic for Random
+        "무작위의", // Korean
+        "สุ่ม",
+        "عشوائي",
+    ];
+    
+    const invertTranslations = [
+        'उलटना',  // Hindi for Invert
+        'తిరగబెట్టు', // Telugu for Invert
+        '反转',        // Chinese for Invert
+        '反転',    // Japanese for Invert
+        'הִתהַפֵּךְ', // Hebrew for Invert
+        'បញ្ច្រាស', //khmer
+        '거꾸로하다', //korean
+        'กลับด้าน', // thai
+        "መገለባበጥ", // amharic
+        'عكس',
+        'לַהֲפוֹך'
+    
+      ];
   let lastShuffleIndex = -1;
   let lastInvertIndex = -1;
 
@@ -81,19 +89,18 @@ const invertTranslations = [
       return newIndex;
 }
   
-  function shuffle_trans() {
-    const randomIndex = Math.floor(Math.random() * shuffleTranslations.length);
+function shuffle_trans() {
+    const randomIndex = getRandomIndex(shuffleTranslations.length, lastShuffleIndex);
     document.querySelector('.pill-button:nth-child(1) .button-char').textContent = shuffleTranslations[randomIndex];
-    lastShuffleIndex = randomIndex;  // Remember the last index for next time
+    lastShuffleIndex = randomIndex; 
+}
 
-  }
+function invert_trans() {
+    const randomIndex = getRandomIndex(invertTranslations.length, lastInvertIndex);
+    document.querySelector('.pill-button:nth-child(2) .button-char').textContent = invertTranslations[randomIndex];
+    lastInvertIndex = randomIndex; 
+}
 
-  function invert_trans() {
-    const randomIndex = Math.floor(Math.random() * invertTranslations.length);
-    document.querySelector('.pill-button:nth-child(3) .button-char').textContent = invertTranslations[randomIndex];
-    lastInvertIndex = randomIndex;  // Remember the last index for next time
-
-  }
   
   
   </script>
@@ -116,13 +123,13 @@ const invertTranslations = [
     <div class="social-links">
       <div class="social-row">
           <a href="https://twitter.com/pavan6000" class="fa fa-twitter"></a>
-          <a href="https://www.instagram.com/6.outof.10" class="fa fa-instagram"></a>
+          <a href="https://www.instagram.com/pavan__6000" class="fa fa-instagram"></a>
           <a href="https://www.linkedin.com/in/pavanmannem1" class="fa fa-linkedin"></a>
         </div>
       <div class="social-row">
           <a href="https://open.spotify.com/user/pmannem" class="fa fa-spotify"></a>
           <a href="https://github.com/pavanmannem" class="fa fa-github"></a>
-          <a href="mailto:youremail@example.com" class="fa fa-envelope"></a>
+          <a href="mailto:pavan.mannem@gmail.com" class="fa fa-envelope"></a>
       </div>
     </div>
 

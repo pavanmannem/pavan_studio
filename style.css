@@ -31,15 +31,10 @@
 
 
 
-.textArea {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size:12;
-  text-align: center;
-}
-
 .button-container {
   display: none;
   font-family: 'Quanta';
+  font-weight: bold;
   position: absolute;
   transform: translateX(-50%);
   align-items: center;
@@ -57,6 +52,8 @@
   display: flex;        /* Makes children display in a row */
   justify-content: space-around;  /* Space the buttons evenly */
   left: 4%;
+  font-size: 25;
+  font-weight: bold;
 
 }
 
@@ -91,7 +88,7 @@
   position: absolute;
   top: 10%;  /* Reduced from previous 15%; adjust further if needed */
   text-align: center;
-  font-size: 25px;        /* Adjust as per your preference */    /* Space between the character and text */
+  font-size: 22px;        /* Adjust as per your preference */    /* Space between the character and text */
   color: #F74d26;            /* Making the character red */
 }
 
@@ -151,7 +148,7 @@
 
 
 .credit {
-  font-family: 'Quanta';
+  font-family: 'Public';
   position: absolute;
   bottom: 10px;  /* Adjust this value to position the credit from the bottom */
   left: 50%;
@@ -183,7 +180,7 @@
 
 
 .loading-bar-container {
-  font-family: 'Quanta';
+  font-family: 'Public';
   position: absolute;
   top: 50%;
   left: 0%; /* Start at 25% to be in the middle 50% of the screen */
@@ -206,13 +203,13 @@
   background-color: #F74d26;
   transition: width 0.2s ease-in-out;
   position: absolute;
-  border-radius: 2rem;
+  border-radius: 0.7rem;
 
 }
 
 .loading-text {
   position: absolute;
-  font-family: 'Quanta';
+  font-family: 'Public';
   font-size: 50px;
   left: 50%;
   top: 42%;

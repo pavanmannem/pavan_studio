@@ -19,7 +19,7 @@ function setText(){
   sHarry = [];
 
   fullHeight = 0;
-  var enteredText = "I'M PAVAN MANNEM → FIND ME IN LOS ANGELES CRUNCHING NUMBERS AT SONY PICTURES & ENTERTAINMENT";
+  var enteredText = "I'M PAVAN MANNEM \n FIND ME IN LOS ANGELES CRUNCHING NUMBERS AT SONY PICTURES & ENTERTAINMENT";
   // var enteredText = "I'M PAVAN MANNEM → FIND ME IN AUSTIN CRUNCHING NUMBERS AT SYNTHESIS PARTNERS — A CREATIVE DATA HOUSE";
   // var enteredText = "I'M PAVAN MANNEM → FIND ME IN LOS ANGELES CRUNCHING NUMBERS AT A STARTUP CALLED OTTER";
 
@@ -181,7 +181,7 @@ function randomInsert(){
 function invert(){
   inverter = !inverter;
   if(inverter == true){
-    bkgdColor = color('#ffffff');
+    bkgdColor = color('#FFFFFF');
     foreColor = color('#000000');
     colorA[4] = bkgdColor;
     pImg[6] = loadImage("./resources/gifs/6i.gif");

@@ -62,18 +62,23 @@ function preload() {
     // "./resources/fonts/PPNeueMachina-Regular.ttf",
     // "./resources/fonts/PPNeueMachina-Regular.ttf",
     // "./resources/fonts/Amphora-Regular.otf",
-    "./resources/fonts/Amphora-Regular.otf",
-    "./resources/fonts/QuantaGroteskPro-Medium.ttf",
-    "./resources/fonts/QuantaGroteskPro-Medium.ttf",
+    // "./resources/fonts/Amphora-Regular.otf",
+    // "./resources/fonts/QuantaGroteskPro-Medium.ttf",
+    // "./resources/fonts/QuantaGroteskPro-Medium.ttf",
     // "./resources/fonts/QuantaGroteskPro-Medium.ttf",
     // "./resources/fonts/PPNeueMachina-Regular.ttf",
     // "./resources/fonts/PublicSans-SemiBold.ttf",
     
-    // "./resources/fonts/Amphora-Regular.otf",
+    "./resources/fonts/PublicSans-SemiBold.ttf",
+    "./resources/fonts/PublicSans-SemiBold.ttf",
+    "./resources/fonts/PublicSans-SemiBold.ttf",
 
 
 
-  ];
+
+ 
+
+];
   
   fontPaths.forEach((path, index) => {
       tFont[index] = loadFont(path, updateProgress, err => {
@@ -102,7 +107,7 @@ function setup(){
   wWindow = width - map(wPad, 0, 100, 0, width);
   typeToggle = int(random(1,2));
 
-  bkgdColor = color('#ffffff');
+  bkgdColor = color('#FFFFFF');
   foreColor = color('#000000');
   colorA[0] = color('#25d964');
   colorA[1] = color('#f24f13');
