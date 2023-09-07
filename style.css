@@ -19,8 +19,15 @@
 
 @font-face {
   font-family: "Quanta";
-  src: url(resources/QuantaGroteskPro-Medium.ttf) format("truetype");
+  src: url(resources/fonts/QuantaGroteskPro-Medium.ttf) format("truetype");
 }
+
+
+@font-face {
+  font-family: "Machina";
+  src: url(resources/fonts/PPNeueMachina-Regular.ttf) format("truetype");
+}
+
 
 
 
@@ -32,14 +39,25 @@
 
 .button-container {
   display: none;
-  font-family: 'Public';
+  font-family: 'Quanta';
   position: absolute;
   transform: translateX(-50%);
   align-items: center;
-  top: 5%;  /* Adjust this value as needed */
-  left: 15%;
+  top: 5%;  
+  left: 50%;
+  height: 15%;
+  width: 98%;
   text-align: center;  /* To center the text */
-  margin-left: 1%;
+  align-items: center;
+  transform: translateX(-50%);
+}
+
+.pill-buttons{
+  position: absolute;
+  display: flex;        /* Makes children display in a row */
+  justify-content: space-around;  /* Space the buttons evenly */
+  left: 4%;
+
 }
 
 .pill-button {
@@ -54,13 +72,15 @@
   border-radius: 30px;
   border-style: solid;
   border-color: #F18268;
-  border-width: 2px;
+  border-width: 0.2rem;
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
   text-align: center;
   color: #F74d26
 
 }
+
+
 
 .pill-button:hover {
   background-color: #F18268;
@@ -69,36 +89,78 @@
 
 .button-char {
   position: absolute;
-  top: 15%;  /* Reduced from previous 15%; adjust further if needed */
-  left: 0;
-  right: 0;
+  top: 10%;  /* Reduced from previous 15%; adjust further if needed */
   text-align: center;
-  font-size: 24px;        /* Adjust as per your preference */    /* Space between the character and text */
+  font-size: 25px;        /* Adjust as per your preference */    /* Space between the character and text */
   color: #F74d26;            /* Making the character red */
 }
 
 .pill-button > span:not(.button-char) {
   position: absolute;
-  bottom: 20%; /* Adjust this value as needed */
+  bottom: 15%; /* Adjust this value as needed */
   text-align: center;  /* To center the text */
+  font-size: 18px;        /* Adjust as per your preference */    /* Space between the character and text */
+
 }
 
-.spacer {
-  width: 10px;
+.pill-buttons .pill-button:first-child {
+  margin-right: 10px; /* Adjust as per your preference */
 }
+
+
+.social-links {
+  position: absolute;
+  left: 90%;
+  width: auto;
+  padding: 0;
+  transform: translateX(-50%); 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+
+}
+.social-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px; /* You can adjust this for spacing between the two rows */
+}
+
+.social-links a {
+  color: #F74d26;
+  font-size: 30px;
+  text-decoration: none;
+  border-radius: 50%;
+  width: 20px;  /* Approx width of the pill button, adjust if needed */
+  height: 20px;  /* Approx height of the pill button, adjust if needed */
+  display: flex;  /* Below three lines center the icon in the middle of the anchor element */
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease-in-out; 
+  padding: 5px; 
+  margin: 0 5px;  
+}
+
+.social-links a:hover {
+  color: blue;
+}
+
+
 
 
 
 .credit {
-  font-family: 'Public';
+  font-family: 'Quanta';
   position: absolute;
-  bottom: 0.5px;
+  bottom: 10px;  /* Adjust this value to position the credit from the bottom */
   left: 50%;
-  transform: translateX(-50%); /* Adjusts for perfect centering */
+  transform: translateX(-50%);
   padding: 20px;
   color: #F74d26;
   font-size: 14px; /* Example responsive text size for mobile */
   text-decoration: italic;
+
 }
 
 .credit a {
@@ -121,16 +183,20 @@
 
 
 .loading-bar-container {
-  font-family: 'Public';
+  font-family: 'Quanta';
   position: absolute;
   top: 50%;
-  left: 25%; /* Start at 25% to be in the middle 50% of the screen */
-  width: 50%; /* Middle 50% of the screen */
-  height: 10px;
+  left: 0%; /* Start at 25% to be in the middle 50% of the screen */
+  width: 100%; /* Middle 50% of the screen */
+  height: 30px;
   color: #F74d26;
   z-index: 1000;
   align-items: center;
-  border-radius: 3%;
+  display: flex;         /* Added */
+  flex-direction: column; /* Added */
+  align-items: center;    /* Added */
+  justify-content: center; /* Added */
+
 
 }
 
@@ -140,98 +206,24 @@
   background-color: #F74d26;
   transition: width 0.2s ease-in-out;
   position: absolute;
+  border-radius: 2rem;
 
 }
 
 .loading-text {
-  font-size: 40px;
+  position: absolute;
+  font-family: 'Quanta';
+  font-size: 50px;
   left: 50%;
+  top: 42%;
+  color:  #F74d26;
+  transform: translateX(-50%);
   font-weight: bold;
-  margin-bottom: 5px; /* Spacing between text and loading bar */
-  align-items: center;
+  z-index: 100;
+
 }
 
 .loading-percentage {
-  font-weight: normal;
+  font-weight: bold;
 }
 
-.social-links {
-  position: fixed;
-  top: 10%;
-  right: 10px;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 2px;
-  z-index: 2; /* Ensures the bar stays above other elements */
-  border-radius: 15px;
-  border-style: solid;
-  border-color: #F74d26;
-  border-width: 0.1rem;
-
-}
-
-.social-links a {
-  color: #F74d26; /* Default color of the icons */
-  font-size: 30px; /* Size of the icons */
-  text-decoration: none;
-  padding: 5px;
-  border-radius: 50%;
-  transition: color 0.s ease-in-out; /* Smooth color transition on hover */
-}
-
-.social-links a:hover {
-  color: #F74d26; /* Color on hover */
-}
-
-.toggle_radio {
-  display: flex; 
-  justify-content: space-between; 
-  position: absolute;
-  width: 500px;
-  height: 50px;
-  border: 0.1rem solid #F74d26;
-  border-radius: 20px;
-  top: 10%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.toggle_radio label {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  color: #F74d26;
-  cursor: pointer;
-}
-
-.toggle_option_slider {
-  position: absolute;
-  bottom: 5px;
-  width: 10px;
-  height: 10px;
-  background-color: #F74d26;
-  border-radius: 50%;
-  transition: left .4s ease-in-out, width .2s ease-in .1s, border-radius .2s ease-in .1s;
-}
-
-.toggle_radio input[type=radio]:nth-of-type(1):checked ~ .toggle_option_slider {
-  left: 12.5%;
-}
-
-.toggle_radio input[type=radio]:nth-of-type(2):checked ~ .toggle_option_slider {
-  left: 37.5%;
-}
-
-.toggle_radio input[type=radio]:nth-of-type(3):checked ~ .toggle_option_slider {
-  left: 62.5%;
-}
-
-.toggle_radio input[type=radio]:nth-of-type(4):checked ~ .toggle_option_slider {
-  left: 87.5%;
-}
-
-.toggle_radio input[type=radio] {
-  display: none;
-}

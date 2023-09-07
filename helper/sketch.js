@@ -35,6 +35,7 @@ var typeToggle = 1;
 function preload() {
   // Cache DOM elements
   const loadingBarEl = document.querySelector('.loading-bar');
+  const loadingTextEl = document.querySelector('.loading-text');
   const loadingPercentageEl = document.querySelector('.loading-percentage');
   const loadingBarContainerEl = document.querySelector('.loading-bar-container');
   const buttonContainerEl = document.querySelector('.button-container');
@@ -51,6 +52,7 @@ function preload() {
 
       if (loadedImagesCount == totalResources) {
           loadingBarContainerEl.style.display = 'none';
+          loadingTextEl.style.display = 'none'
           buttonContainerEl.style.display = 'flex';
       }
   }
@@ -59,12 +61,16 @@ function preload() {
   const fontPaths = [
     // "./resources/fonts/PPNeueMachina-Regular.ttf",
     // "./resources/fonts/PPNeueMachina-Regular.ttf",
+    // "./resources/fonts/Amphora-Regular.otf",
     "./resources/fonts/Amphora-Regular.otf",
-        "./resources/fonts/PPNeueMachina-Regular.ttf",
-
-    // "./resources/fonts/Amphora-Regular.otf",
-    // "./resources/fonts/Amphora-Regular.otf",
     "./resources/fonts/QuantaGroteskPro-Medium.ttf",
+    "./resources/fonts/QuantaGroteskPro-Medium.ttf",
+    // "./resources/fonts/QuantaGroteskPro-Medium.ttf",
+    // "./resources/fonts/PPNeueMachina-Regular.ttf",
+    // "./resources/fonts/PublicSans-SemiBold.ttf",
+    
+    // "./resources/fonts/Amphora-Regular.otf",
+
 
 
   ];

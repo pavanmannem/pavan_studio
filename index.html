@@ -36,12 +36,12 @@
 
 <body>
 
-
+  <div>
     <div class="loading-bar-container">
-      <div class="loading-text">
-        <span class="loading-text">LOADING [<span class="loading-percentage">0</span>%]</span>
-      </div>
       <div class="loading-bar"></div>
+    </div>
+    
+      <div class="loading-text">LOADING [<span class="loading-percentage">0</span>%]</div>
     </div>
 
 
@@ -98,53 +98,44 @@ const invertTranslations = [
   
   </script>
 
-  
-
-
-
-
-  <div class="toggle_radio">
-    <input type="radio" class="toggle_option" id="first_toggle" name="toggle_option" checked>
-    <input type="radio" class="toggle_option" id="second_toggle" name="toggle_option">
-    <input type="radio" class="toggle_option" id="third_toggle" name="toggle_option">
-    <input type="radio" class="toggle_option" id="fourth_toggle" name="toggle_option">
-    <label for="first_toggle"><p>HOME</p></label>
-    <label for="second_toggle"><p>NBA</p></label>
-    <label for="third_toggle"><p>MOVIES</p></label>
-    <label for="fourth_toggle"><p>MUSIC</p></label>
-    <div class="toggle_option_slider"></div>
-  </div>
-
-
- 
-
     
 
 
   <div class="button-container">
-    <div class="pill-button" onclick="reRoll(); shuffle_trans()">
-        <span class="button-char">यादृच्छिक</span>
-        <span>RANDOM SHUFFLE</span>
+    <div class ="pill-buttons">
+      <div class="pill-button" onclick="reRoll(); shuffle_trans()">
+          <span class="button-char">यादृच्छिक</span>
+          <span>RANDOM SHUFFLE</span>
+      </div>
+      <div class="pill-button" onclick="invert(); invert_trans()">
+          <span class="button-char">విలోమం</span>
+          <span>COLOR INVERTER</span>
+      </div>
     </div>
-    <div class="spacer"></div>
-    <div class="pill-button" onclick="invert(); invert_trans()">
-        <span class="button-char">విలోమం</span>
-        <span>COLOR INVERTER</span>
+
+    <div class="social-links">
+      <div class="social-row">
+          <a href="https://twitter.com/pavan6000" class="fa fa-twitter"></a>
+          <a href="https://www.instagram.com/6.outof.10" class="fa fa-instagram"></a>
+          <a href="https://www.linkedin.com/in/pavanmannem1" class="fa fa-linkedin"></a>
+        </div>
+      <div class="social-row">
+          <a href="https://open.spotify.com/user/pmannem" class="fa fa-spotify"></a>
+          <a href="https://github.com/pavanmannem" class="fa fa-github"></a>
+          <a href="mailto:youremail@example.com" class="fa fa-envelope"></a>
+      </div>
     </div>
-</div>
+
+    </div>
 
 
 
-    <div class="credit">
+
+  <div class="credit">
       ORIGINAL DESIGN BY <a href="https://www.kielm.com/" target="_blank">KIEL DANGER</a>
   </div>
 
-  <div class="social-links">
-    <a href="https://twitter.com/pavan6000" class="fa fa-twitter"></a>
-    <a href="https://www.instagram.com/6.outof.10" class="fa fa-instagram"></a>
-    <a href="https://www.linkedin.com/in/pavanmannem1" class="fa fa-linkedin"></a>
-    <a href="https://open.spotify.com/user/pmannem" class="fa fa-spotify"></a>
-</div>
+
 
 <script>document.querySelectorAll('.social-links a').forEach(link => {
   link.setAttribute('target', '_blank');
