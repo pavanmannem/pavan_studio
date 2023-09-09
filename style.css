@@ -28,13 +28,17 @@
   src: url(resources/fonts/PPNeueMachina-Regular.ttf) format("truetype");
 }
 
+.body{
+  background-color: #F8F0E3;
+
+}
 
 
 
 .button-container {
   display: none;
-  font-family: 'Quanta';
-  font-weight: bold;
+  font-family: 'Amphora';
+  font-weight: 400;
   position: absolute;
   transform: translateX(-50%);
   align-items: center;
@@ -148,7 +152,7 @@
 
 
 .credit {
-  font-family: 'Public';
+  font-family: 'Amphora';
   position: absolute;
   bottom: 10px;  /* Adjust this value to position the credit from the bottom */
   left: 50%;
@@ -209,7 +213,7 @@
 
 .loading-text {
   position: absolute;
-  font-family: 'Public';
+  font-family: 'Quanta';
   font-size: 50px;
   left: 50%;
   top: 42%;

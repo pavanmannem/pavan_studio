@@ -181,7 +181,7 @@ function randomInsert(){
 function invert(){
   inverter = !inverter;
   if(inverter == true){
-    bkgdColor = color('#FFFFFF');
+    bkgdColor = color('#F8F0E3');
     foreColor = color('#000000');
     colorA[4] = bkgdColor;
     pImg[6] = loadImage("./resources/gifs/6i.gif");
@@ -191,6 +191,21 @@ function invert(){
     pGradientCH();
 
     setText();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   } else {
     bkgdColor = color('#000000');
     foreColor = color('#ffffff');
@@ -202,6 +217,21 @@ function invert(){
     pGradientCH();
 
     setText();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   }
+
 }
 

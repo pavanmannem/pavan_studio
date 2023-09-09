@@ -59,25 +59,10 @@ function preload() {
 
   // Load fonts in parallel
   const fontPaths = [
-    // "./resources/fonts/PPNeueMachina-Regular.ttf",
-    // "./resources/fonts/PPNeueMachina-Regular.ttf",
-    // "./resources/fonts/Amphora-Regular.otf",
-    // "./resources/fonts/Amphora-Regular.otf",
-    // "./resources/fonts/QuantaGroteskPro-Medium.ttf",
-    // "./resources/fonts/QuantaGroteskPro-Medium.ttf",
-    // "./resources/fonts/QuantaGroteskPro-Medium.ttf",
-    // "./resources/fonts/PPNeueMachina-Regular.ttf",
-    // "./resources/fonts/PublicSans-SemiBold.ttf",
-    
+
+    "./resources/fonts/Amphora-Regular.otf",
+    "./resources/fonts/QuantaGroteskPro-Medium.ttf",
     "./resources/fonts/PublicSans-SemiBold.ttf",
-    "./resources/fonts/PublicSans-SemiBold.ttf",
-    "./resources/fonts/PublicSans-SemiBold.ttf",
-
-
-
-
- 
-
 ];
   
   fontPaths.forEach((path, index) => {
