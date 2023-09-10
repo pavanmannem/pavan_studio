@@ -72,19 +72,20 @@
   padding: 35px;
   border-radius: 30px;
   border-style: solid;
-  border-color: #F18268;
+  border-color: #D1A9FF;
   border-width: 0.2rem;
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
   text-align: center;
-  color: #F74d26
+  color: #5f05fa
 
 }
 
 
 
 .pill-button:hover {
-  background-color: #F18268;
+  background-color: #D1A9FF
+  ;
   cursor:default;
 }
 
@@ -93,7 +94,7 @@
   top: 10%;  /* Reduced from previous 15%; adjust further if needed */
   text-align: center;
   font-size: 22px;        /* Adjust as per your preference */    /* Space between the character and text */
-  color: #F74d26;            /* Making the character red */
+  color: #5f05fa;            /* Making the character red */
 }
 
 .pill-button > span:not(.button-char) {
@@ -129,7 +130,7 @@
 }
 
 .social-links a {
-  color: #F74d26;
+  color: #5f05fa;
   font-size: 30px;
   text-decoration: none;
   border-radius: 50%;
@@ -144,7 +145,7 @@
 }
 
 .social-links a:hover {
-  color: blue;
+  color: #F74d26;
 }
 
 
@@ -158,25 +159,20 @@
   left: 50%;
   transform: translateX(-50%);
   padding: 20px;
-  color: #F74d26;
+  color: #5f05fa;
   font-size: 14px; /* Example responsive text size for mobile */
   text-decoration: italic;
 
 }
 
 .credit a {
-  color: #F74d26; /* This is a common hyperlink color, but feel free to change */
-  text-decoration: underline;
-}
-
-.credit a {
-  color: #F74d26; /* This is a common hyperlink color, but feel free to change */
+  color: #5f05fa; /* This is a common hyperlink color, but feel free to change */
   text-decoration: underline;
   transition: 0.4s ease-in-out; /* Moved transition here so it applies on hover and non-hover states */
 }
 
 .credit a:hover {
-  color: #2A56FF; /* This is a common hyperlink color, but feel free to change */
+  color: #F74d26; /* This is a common hyperlink color, but feel free to change */
   text-decoration: underline;
 }
 
@@ -204,7 +200,7 @@
 .loading-bar {
   height: 100%;
   width: 0%;
-  background-color: #F74d26;
+  background-color: #5f05fa;
   transition: width 0.2s ease-in-out;
   position: absolute;
   border-radius: 0.7rem;
@@ -217,7 +213,7 @@
   font-size: 50px;
   left: 50%;
   top: 42%;
-  color:  #F74d26;
+  color:  #5f05fa;
   transform: translateX(-50%);
   font-weight: bold;
   z-index: 100;

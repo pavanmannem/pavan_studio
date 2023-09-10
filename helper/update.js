@@ -1,3 +1,8 @@
+const dark_main_color = '#F74d26';
+
+
+const light_main_color = '#5f05fa';
+
 
 function updateStripAndPadding() {
   // Calculate the values based on screen size
@@ -179,6 +184,8 @@ function randomInsert(){
 
 
 function invert(){
+
+
   inverter = !inverter;
   if(inverter == true){
     bkgdColor = color('#F8F0E3');
@@ -191,19 +198,7 @@ function invert(){
     pGradientCH();
 
     setText();
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
 
 
   } else {
@@ -217,17 +212,6 @@ function invert(){
     pGradientCH();
 
     setText();
-
-
-
-
-
-
-
-
-
-
-
 
 
 
