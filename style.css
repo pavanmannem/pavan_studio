@@ -84,8 +84,7 @@
 
 
 .pill-button:hover {
-  background-color: #D1A9FF
-  ;
+  background-color: #D1A9FF;
   cursor:default;
 }
 
@@ -93,8 +92,7 @@
   position: absolute;
   top: 10%;  /* Reduced from previous 15%; adjust further if needed */
   text-align: center;
-  font-size: 22px;        /* Adjust as per your preference */    /* Space between the character and text */
-  color: #5f05fa;            /* Making the character red */
+  font-size: 22px;        
 }
 
 .pill-button > span:not(.button-char) {
@@ -161,19 +159,22 @@
   padding: 20px;
   color: #5f05fa;
   font-size: 14px; /* Example responsive text size for mobile */
-  text-decoration: italic;
+  text-decoration: bold;
+  font-weight: 500;
 
 }
 
 .credit a {
   color: #5f05fa; /* This is a common hyperlink color, but feel free to change */
   text-decoration: underline;
-  transition: 0.4s ease-in-out; /* Moved transition here so it applies on hover and non-hover states */
+  transition: 0.6s ease-in-out; /* Moved transition here so it applies on hover and non-hover states */
 }
 
 .credit a:hover {
   color: #F74d26; /* This is a common hyperlink color, but feel free to change */
   text-decoration: underline;
+  transition: 0.6s ease-in-out; /* Moved transition here so it applies on hover and non-hover states */
+
 }
 
 
@@ -185,7 +186,7 @@
   top: 50%;
   left: 0%; /* Start at 25% to be in the middle 50% of the screen */
   width: 100%; /* Middle 50% of the screen */
-  height: 30px;
+  height: 10px;
   color: #F74d26;
   z-index: 1000;
   align-items: center;
@@ -210,15 +211,23 @@
 .loading-text {
   position: absolute;
   font-family: 'Quanta';
-  font-size: 50px;
+  font-size: 30px;
   left: 50%;
   top: 42%;
-  color:  #5f05fa;
+  color: #5f05fa;
   transform: translateX(-50%);
   font-weight: bold;
   z-index: 100;
-
 }
+
+.loading-text > .bracket {
+  font-size: 50px; /* Adjust as necessary */
+}
+
+.loading-percentage {
+  font-size: 30px; /* Adjust as necessary */
+}
+
 
 .loading-percentage {
   font-weight: bold;

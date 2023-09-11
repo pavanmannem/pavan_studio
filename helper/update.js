@@ -182,16 +182,68 @@ function randomInsert(){
 }
 
 
+function applyStyles(primaryColor, secondaryColor, oppositeColor) {
+  // Applying styles for ".pill-button"
+  let pillButtons = document.querySelectorAll('.pill-button');
+  pillButtons.forEach(function(button) {
+    button.style.borderColor = secondaryColor;
+    button.style.color = primaryColor;
 
-function invert(){
+    button.onmouseover = function() {
+      button.style.backgroundColor = secondaryColor;
+    };
+
+    button.onmouseout = function() {
+      button.style.backgroundColor = '';
+    };
+  });
+
+  // Applying styles for ".social-links a"
+  let socialLinks = document.querySelectorAll('.social-links a');
+  socialLinks.forEach(function(link) {
+    link.style.color = primaryColor;
+
+    link.onmouseover = function() {
+      link.style.color = oppositeColor;
+    };
+
+    link.onmouseout = function() {
+      link.style.color = primaryColor;
+    };
+  });
+
+  // Applying styles for ".credit" and ".credit a"
+  let credit = document.querySelector('.credit');
+  credit.style.color = primaryColor;
+
+  let creditLinks = document.querySelectorAll('.credit a');
+  creditLinks.forEach(function(link) {
+    link.style.color = primaryColor;
+
+    link.onmouseover = function() {
+      link.style.color = oppositeColor;
+    };
+
+    link.onmouseout = function() {
+      link.style.color = primaryColor;
+    };
+  });
+}
 
 
+
+var inverter = true; // make sure to define `inverter` before using it
+
+function invert() {
   inverter = !inverter;
+
   if(inverter == true){
+    // Light Theme Styles    
     bkgdColor = color('#F8F0E3');
     foreColor = color('#000000');
     colorA[4] = bkgdColor;
     pImg[6] = loadImage("./resources/gifs/6i.gif");
+    applyStyles('#5f05fa','#D1A9FF', '#F74d26');
 
     pGradientH();
     pGradientV();
@@ -199,22 +251,18 @@ function invert(){
 
     setText();
 
-
-
   } else {
+    // Dark Theme Styles    
     bkgdColor = color('#000000');
     foreColor = color('#ffffff');
     colorA[4] = bkgdColor;
     pImg[6] = loadImage("./resources/gifs/6.gif");
+    applyStyles('#F74d26','#F18268', '#5f05fa');
 
     pGradientH();
     pGradientV();
     pGradientCH();
 
     setText();
-
-
   }
-
 }
-
