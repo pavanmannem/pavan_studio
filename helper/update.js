@@ -198,7 +198,7 @@ function invert(){
     pGradientCH();
 
     setText();
-  
+
 
 
   } else {
@@ -212,7 +212,6 @@ function invert(){
     pGradientCH();
 
     setText();
-
 
 
   }
