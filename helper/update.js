@@ -239,7 +239,7 @@ function invert() {
 
   if(inverter == true){
     // Light Theme Styles    
-    bkgdColor = color('#F8F0E3');
+    bkgdColor = color('#FFFFFF');
     foreColor = color('#000000');
     colorA[4] = bkgdColor;
     pImg[6] = loadImage("./resources/gifs/6i.gif");
