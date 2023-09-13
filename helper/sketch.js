@@ -92,7 +92,7 @@ function setup(){
   wWindow = width - map(wPad, 0, 100, 0, width);
   typeToggle = int(random(1,2));
 
-  bkgdColor = color('#F8F0E3');
+  bkgdColor = color('#FFFFFF');
   foreColor = color('#000000');
   colorA[0] = color('#5f05fa');
   colorA[1] = color('#F74d26');
